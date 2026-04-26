@@ -17,8 +17,14 @@ package com.tencent.scrfdncnn;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.PixelFormat;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -29,8 +35,8 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 public class MainActivity extends Activity implements SurfaceHolder.Callback
 {
@@ -45,6 +51,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
     private int current_cpugpu = 0;
 
     private SurfaceView cameraView;
+    private Handler updateHandler;
+    private Runnable updateRunnable;
 
     /** Called when the activity is first created. */
     @Override
@@ -67,11 +75,17 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
 
                 int new_facing = 1 - facing;
 
+                // 关闭摄像头
                 scrfdncnn.closeCamera();
 
-                scrfdncnn.openCamera(new_facing);
-
+                // 切换摄像头方向
                 facing = new_facing;
+
+                // 重新打开摄像头
+                scrfdncnn.openCamera(facing);
+
+                // 重新设置surface
+                scrfdncnn.setOutputWindow(cameraView.getHolder().getSurface());
             }
         });
 
@@ -112,6 +126,19 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
         });
 
         reload();
+
+        // 初始化Handler用于更新Canvas
+        updateHandler = new Handler(Looper.getMainLooper());
+        updateRunnable = new Runnable() {
+            @Override
+            public void run() {
+                if (cameraView != null && cameraView.getHolder() != null) {
+                    drawChineseText(cameraView.getHolder(), cameraView.getWidth(), cameraView.getHeight());
+                }
+                // 每500ms更新一次
+                updateHandler.postDelayed(this, 500);
+            }
+        };
     }
 
     private void reload()
@@ -127,16 +154,79 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height)
     {
         scrfdncnn.setOutputWindow(holder.getSurface());
+
+        // 在surface上绘制中文文字
+        drawChineseText(holder, width, height);
+    }
+
+    private void drawChineseText(SurfaceHolder holder, int width, int height)
+    {
+        Surface surface = holder.getSurface();
+        if (surface == null || !surface.isValid()) {
+            return;
+        }
+
+        Canvas canvas = null;
+        try {
+            canvas = surface.lockCanvas(null);
+            if (canvas != null) {
+                // 清除之前的绘制
+                canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+
+                // 设置画笔
+                android.graphics.Paint paint = new android.graphics.Paint();
+                paint.setColor(Color.RED);
+                paint.setTextSize(40);
+                paint.setAntiAlias(true);
+                paint.setStyle(android.graphics.Paint.Style.FILL);
+
+                // 获取识别结果并绘制
+                for (int i = 0; i < 10; i++) {  // 最多显示10个识别结果
+                    String name = scrfdncnn.getRecognitionResult(i);
+                    float similarity = scrfdncnn.getRecognitionSimilarity(i);
+
+                    if (name != null && !name.isEmpty()) {
+                        // 绘制人名
+                        canvas.drawText(name, 50, 100 + i * 80, paint);
+
+                        // 绘制相似度
+                        paint.setColor(Color.GREEN);
+                        paint.setTextSize(30);
+                        String similarityText = String.format("%.1f%%", similarity * 100);
+                        canvas.drawText(similarityText, 50, 130 + i * 80, paint);
+
+                        // 恢复红色画笔
+                        paint.setColor(Color.RED);
+                        paint.setTextSize(40);
+                    }
+                }
+
+                // 如果没有识别结果，显示提示文字
+                if (scrfdncnn.getRecognitionResult(0) == null || scrfdncnn.getRecognitionResult(0).isEmpty()) {
+                    canvas.drawText("等待人脸识别...", 50, 100, paint);
+                }
+            }
+        } catch (Exception e) {
+            Log.e("MainActivity", "Error drawing on surface: " + e.getMessage());
+        } finally {
+            if (canvas != null) {
+                surface.unlockCanvasAndPost(canvas);
+            }
+        }
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder)
     {
+        // 启动Canvas更新
+        updateHandler.post(updateRunnable);
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder)
     {
+        // 停止Canvas更新
+        updateHandler.removeCallbacks(updateRunnable);
     }
 
     @Override

@@ -1,15 +1,12 @@
 plugins {
     id 'com.android.application'
 }
-
 android {
     namespace 'com.tencent.scrfdncnn'
-    compileSdk 33
-    ndkVersion "29.0.14206865"
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.tencent.scrfdncnn"
-        archivesBaseName = "$applicationId"
 
         minSdkVersion 24
         targetSdkVersion 35
@@ -19,17 +16,17 @@ android {
                 arguments "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
             }
         }
+
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+        }
     }
 
     externalNativeBuild {
         cmake {
-            version "3.31.5"
+            version "3.22.1"
             path file('src/main/jni/CMakeLists.txt')
         }
-    }
-
-    dependencies {
-        implementation 'com.android.support:support-v4:24.0.0'
     }
 
     packaging {
@@ -37,4 +34,8 @@ android {
             useLegacyPackaging true
         }
     }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.12.0'
 }

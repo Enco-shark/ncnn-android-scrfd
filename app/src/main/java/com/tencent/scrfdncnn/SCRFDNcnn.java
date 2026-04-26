@@ -23,6 +23,9 @@ public class SCRFDNcnn
     public native boolean openCamera(int facing);
     public native boolean closeCamera();
     public native boolean setOutputWindow(Surface surface);
+    public native String getRecognitionResult(int faceIndex);
+    public native float getRecognitionSimilarity(int faceIndex);
+    public native void clearRecognitionResults();
 
     static {
         System.loadLibrary("scrfdncnn");
