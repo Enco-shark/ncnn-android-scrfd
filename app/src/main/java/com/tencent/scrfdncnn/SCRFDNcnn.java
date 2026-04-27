@@ -25,6 +25,11 @@ public class SCRFDNcnn
     public native boolean setOutputWindow(Surface surface);
     public native String getRecognitionResult(int faceIndex);
     public native float getRecognitionSimilarity(int faceIndex);
+    public native float getFaceRectX(int faceIndex);
+    public native float getFaceRectY(int faceIndex);
+    public native float getFaceRectWidth(int faceIndex);
+    public native float getFaceRectHeight(int faceIndex);
+    public native int getFaceCount();
     public native void clearRecognitionResults();
 
     static {

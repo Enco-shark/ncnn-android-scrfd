@@ -34,6 +34,9 @@ import android.widget.TextView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends Activity implements SurfaceHolder.Callback
 {
     public static final int REQUEST_CAMERA = 100;
@@ -47,6 +50,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
     private int current_cpugpu = 0;
 
     private SurfaceView cameraView;
+    private OverlayView overlayView;
     private TextView recognitionResultView;
     private Handler updateHandler;
     private Runnable updateRunnable;
@@ -65,6 +69,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
         cameraView.getHolder().setFormat(PixelFormat.RGBA_8888);
         cameraView.getHolder().addCallback(this);
 
+        overlayView = (OverlayView) findViewById(R.id.overlayView);
         recognitionResultView = (TextView) findViewById(R.id.recognitionResult);
 
         Button buttonSwitchCamera = (Button) findViewById(R.id.buttonSwitchCamera);
@@ -126,20 +131,20 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
 
         reload();
 
-        // 初始化Handler用于更新识别结果显示 - 不再使用Canvas绘制
+        // 初始化Handler用于更新识别结果显示
         updateHandler = new Handler(Looper.getMainLooper());
         updateRunnable = new Runnable() {
             @Override
             public void run() {
-                if (recognitionResultView != null) {
+                if (recognitionResultView != null && overlayView != null) {
                     try {
                         updateRecognitionResults();
                     } catch (Exception e) {
                         Log.e("MainActivity", "Error updating results: " + e.getMessage());
                     }
                 }
-                // 每500ms更新一次识别结果显示
-                updateHandler.postDelayed(this, 500);
+                // 每100ms更新一次识别结果显示（更快的刷新率）
+                updateHandler.postDelayed(this, 100);
             }
         };
     }
@@ -150,11 +155,31 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
         boolean hasResult = false;
 
         try {
-            for (int i = 0; i < 10; i++) {
+            int faceCount = scrfdncnn.getFaceCount();
+            List<String> names = new ArrayList<>();
+            List<Float> similarities = new ArrayList<>();
+            List<Float> rectXs = new ArrayList<>();
+            List<Float> rectYs = new ArrayList<>();
+            List<Float> rectWs = new ArrayList<>();
+            List<Float> rectHs = new ArrayList<>();
+
+            for (int i = 0; i < faceCount; i++) {
                 String name = scrfdncnn.getRecognitionResult(i);
+                float similarity = scrfdncnn.getRecognitionSimilarity(i);
+                float rx = scrfdncnn.getFaceRectX(i);
+                float ry = scrfdncnn.getFaceRectY(i);
+                float rw = scrfdncnn.getFaceRectWidth(i);
+                float rh = scrfdncnn.getFaceRectHeight(i);
+
                 if (name != null && !name.isEmpty()) {
-                    float similarity = scrfdncnn.getRecognitionSimilarity(i);
-                    if (i > 0) {
+                    names.add(name);
+                    similarities.add(similarity);
+                    rectXs.add(rx);
+                    rectYs.add(ry);
+                    rectWs.add(rw);
+                    rectHs.add(rh);
+
+                    if (hasResult) {
                         resultText.append("\n");
                     }
                     resultText.append(String.format("%s (%.1f%%)", name, similarity * 100));
@@ -162,6 +187,10 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
                     Log.i("MainActivity", "Recognition: " + name + " -> " + (similarity * 100) + "%");
                 }
             }
+
+            // 更新 OverlayView（在摄像头画面上绘制中文）
+            overlayView.updateFaces(names, similarities, rectXs, rectYs, rectWs, rectHs);
+
         } catch (Exception e) {
             Log.e("MainActivity", "Error reading recognition results: " + e.getMessage());
         }
@@ -193,7 +222,9 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
     public void surfaceCreated(SurfaceHolder holder)
     {
         // 启动识别结果更新
-        updateHandler.post(updateRunnable);
+        if (updateHandler != null && updateRunnable != null) {
+            updateHandler.post(updateRunnable);
+        }
     }
 
     @Override
@@ -251,6 +282,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
         }
 
         cameraView = null;
+        overlayView = null;
         recognitionResultView = null;
 
         Log.i("MainActivity", "onDestroy completed");
