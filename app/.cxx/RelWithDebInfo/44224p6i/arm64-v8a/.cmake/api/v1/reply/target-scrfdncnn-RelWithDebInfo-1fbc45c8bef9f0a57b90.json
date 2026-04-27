@@ -1,0 +1,419 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "D:/data/Desktop/face/ncnn-android-scrfd/app/build/intermediates/cxx/RelWithDebInfo/44224p6i/obj/arm64-v8a/libscrfdncnn.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-fno-rtti"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-fno-exceptions"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-pthread"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "scrfdncnn_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/OpenCV-android/sdk/native/jni/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/ncnn-20260113-android-vulkan/arm64-v8a/include/ncnn"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			],
+			"sysroot" : 
+			{
+				"path" : "D:/data/Android/SDK/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+			}
+		}
+	],
+	"id" : "scrfdncnn::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -Wl,--gc-sections",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\ncnn-20260113-android-vulkan\\arm64-v8a\\lib\\libncnn.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_calib3d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_core.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_dnn.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_features2d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_flann.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_gapi.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_highgui.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgcodecs.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgproc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_ml.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_objdetect.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_photo.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_stitching.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_video.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_videoio.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lcamera2ndk",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lmediandk",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-llog",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-fopenmp",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-static-openmp",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\ncnn-20260113-android-vulkan\\arm64-v8a\\lib\\libSPIRV.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\ncnn-20260113-android-vulkan\\arm64-v8a\\lib\\libglslang.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-landroid",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ljnigraphics",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libade.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgcodecs.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibjpeg-turbo.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibwebp.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibpng.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibtiff.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibopenjp2.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-pthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libIlmImf.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-landroid -llog -lmediandk",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_dnn.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\liblibprotobuf.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-landroid",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-llog",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_calib3d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_features2d.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_flann.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_imgproc.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\staticlibs\\arm64-v8a\\libopencv_core.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libtbb.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lc",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libcpufeatures.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libittnotify.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libtegra_hal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libkleidicv_hal.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libkleidicv_thread.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\OpenCV-android\\sdk\\native\\3rdparty\\libs\\arm64-v8a\\libkleidicv.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-llog",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-latomic -lm",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX",
+		"sysroot" : 
+		{
+			"path" : "D:/data/Android/SDK/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot"
+		}
+	},
+	"name" : "scrfdncnn",
+	"nameOnDisk" : "libscrfdncnn.so",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "scrfdncnn.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "scrfd.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "recognizer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ndkcamera.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

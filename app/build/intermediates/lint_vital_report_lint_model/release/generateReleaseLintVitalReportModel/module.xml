@@ -1,0 +1,20 @@
+<lint-module
+    format="1"
+    dir="D:\data\Desktop\face\ncnn-android-scrfd\app"
+    name=":app"
+    type="APP"
+    maven="scrfdncnn:app:unspecified"
+    agpVersion="9.2.0"
+    buildFolder="build"
+    bootClassPath="D:\data\Android\SDK\platforms\android-35\android.jar;D:\data\Android\SDK\build-tools\36.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-35"
+    neverShrinking="true"
+    highlightGradualR8Api="false">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

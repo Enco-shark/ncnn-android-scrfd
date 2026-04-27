@@ -1,0 +1,14 @@
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\CMakeLists.txt
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\glslang\glslang-config-version.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\glslang\glslang-config.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\glslang\glslang-targets-release.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\glslang\glslang-targets.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\ncnn\ncnn-release.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\ncnn\ncnn.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\ncnn\ncnnConfig.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\ncnn-20260113-android-vulkan\arm64-v8a\lib\cmake\ncnn\ncnnConfigVersion.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\OpenCV-android\sdk\native\jni\abi-arm64-v8a\OpenCVConfig.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\OpenCV-android\sdk\native\jni\abi-arm64-v8a\OpenCVModules-release.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\OpenCV-android\sdk\native\jni\abi-arm64-v8a\OpenCVModules.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\OpenCV-android\sdk\native\jni\OpenCVConfig-version.cmake
+D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\jni\OpenCV-android\sdk\native\jni\OpenCVConfig.cmake

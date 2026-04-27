@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.tencent.scrfdncnn.app-release-7:/layout_main.xml.flat",
+        "source": "com.tencent.scrfdncnn.app-main-8:/layout/main.xml"
+    }
+]

@@ -1,0 +1,1 @@
+D:\data\Desktop\face\ncnn-android-scrfd\app\build\intermediates\cxx\Debug\34561814\obj\arm64-v8a

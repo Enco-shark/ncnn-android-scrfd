@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:!&lt;dir>navigation"><source path="D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\res"><file name="main" path="D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\res\layout\main.xml" qualifiers="" type="layout"/><file path="D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">scrfdncnn</string><string-array name="model_array">
+        <item>500m</item>
+        <item>500m_kps</item>
+        <item>1g</item>
+        <item>2.5g</item>
+        <item>2.5g_kps</item>
+        <item>10g</item>
+        <item>10g_kps</item>
+        <item>34g</item>
+    </string-array><string-array name="cpugpu_array">
+        <item>CPU</item>
+        <item>GPU</item>
+    </string-array></file></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\data\Desktop\face\ncnn-android-scrfd\app\src\release\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release" generated-set="release$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:!&lt;dir>navigation"><source path="D:\data\Desktop\face\ncnn-android-scrfd\app\src\release\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\data\Desktop\face\ncnn-android-scrfd\app\build\generated\res\resValues\release"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~:!&lt;dir>navigation"><source path="D:\data\Desktop\face\ncnn-android-scrfd\app\build\generated\res\resValues\release"/></dataSet><mergedItems/></merger>

@@ -1,0 +1,8 @@
+# ninja log v5
+18	1153	7989024057938433	CMakeFiles/scrfdncnn.dir/ndkcamera.cpp.o	c0588e89944bf01f
+2	1467	7989024061050070	CMakeFiles/scrfdncnn.dir/scrfd.cpp.o	280a71b98797eb77
+10	1358	7989024060017253	CMakeFiles/scrfdncnn.dir/scrfdncnn.cpp.o	df6f8e9390a1c706
+12	1383	7989179525908800	CMakeFiles/scrfdncnn.dir/ndkcamera.cpp.o	5bb51cc78df02adb
+8	1634	7989179528413655	CMakeFiles/scrfdncnn.dir/scrfdncnn.cpp.o	668215e4c7662a85
+18	1702	7989179529121043	CMakeFiles/scrfdncnn.dir/recognizer.cpp.o	aa3d8cd46e6bcf1f
+2	1824	7989179530284283	CMakeFiles/scrfdncnn.dir/scrfd.cpp.o	8a87ea9fbe9aa58d

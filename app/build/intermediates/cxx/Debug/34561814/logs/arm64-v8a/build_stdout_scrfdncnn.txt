@@ -1,0 +1,3 @@
+ninja: Entering directory `D:\data\Desktop\face\ncnn-android-scrfd\app\.cxx\Debug\34561814\arm64-v8a'
+[1/2] Building CXX object CMakeFiles/scrfdncnn.dir/scrfdncnn.cpp.o
+[2/2] Linking CXX shared library D:\data\Desktop\face\ncnn-android-scrfd\app\build\intermediates\cxx\Debug\34561814\obj\arm64-v8a\libscrfdncnn.so

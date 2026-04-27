@@ -1,0 +1,1 @@
+D:\data\Desktop\face\ncnn-android-scrfd\app\build\intermediates\cxx\RelWithDebInfo\44224p6i\obj\armeabi-v7a

@@ -1,0 +1,22 @@
+[
+{
+  "directory": "D:/data/Desktop/face/ncnn-android-scrfd/app/.cxx/RelWithDebInfo/44224p6i/armeabi-v7a",
+  "command": "D:\\data\\Android\\SDK\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --sysroot=D:/data/Android/SDK/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dscrfdncnn_EXPORTS -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/OpenCV-android/sdk/native/jni/include -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/ncnn-20260113-android-vulkan/armeabi-v7a/include/ncnn -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -fno-rtti -fno-exceptions -pthread -o CMakeFiles\\scrfdncnn.dir\\scrfdncnn.cpp.o -c D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\scrfdncnn.cpp",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\scrfdncnn.cpp"
+},
+{
+  "directory": "D:/data/Desktop/face/ncnn-android-scrfd/app/.cxx/RelWithDebInfo/44224p6i/armeabi-v7a",
+  "command": "D:\\data\\Android\\SDK\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --sysroot=D:/data/Android/SDK/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dscrfdncnn_EXPORTS -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/OpenCV-android/sdk/native/jni/include -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/ncnn-20260113-android-vulkan/armeabi-v7a/include/ncnn -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -fno-rtti -fno-exceptions -pthread -o CMakeFiles\\scrfdncnn.dir\\scrfd.cpp.o -c D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\scrfd.cpp",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\scrfd.cpp"
+},
+{
+  "directory": "D:/data/Desktop/face/ncnn-android-scrfd/app/.cxx/RelWithDebInfo/44224p6i/armeabi-v7a",
+  "command": "D:\\data\\Android\\SDK\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --sysroot=D:/data/Android/SDK/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dscrfdncnn_EXPORTS -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/OpenCV-android/sdk/native/jni/include -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/ncnn-20260113-android-vulkan/armeabi-v7a/include/ncnn -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -fno-rtti -fno-exceptions -pthread -o CMakeFiles\\scrfdncnn.dir\\recognizer.cpp.o -c D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\recognizer.cpp",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\recognizer.cpp"
+},
+{
+  "directory": "D:/data/Desktop/face/ncnn-android-scrfd/app/.cxx/RelWithDebInfo/44224p6i/armeabi-v7a",
+  "command": "D:\\data\\Android\\SDK\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi24 --sysroot=D:/data/Android/SDK/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dscrfdncnn_EXPORTS -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/OpenCV-android/sdk/native/jni/include -isystem D:/data/Desktop/face/ncnn-android-scrfd/app/src/main/jni/ncnn-20260113-android-vulkan/armeabi-v7a/include/ncnn -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -fno-rtti -fno-exceptions -pthread -o CMakeFiles\\scrfdncnn.dir\\ndkcamera.cpp.o -c D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\ndkcamera.cpp",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\ndkcamera.cpp"
+}
+]

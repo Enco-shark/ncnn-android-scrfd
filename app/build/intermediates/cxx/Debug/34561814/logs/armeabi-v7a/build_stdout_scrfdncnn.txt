@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\data\Desktop\face\ncnn-android-scrfd\app\.cxx\Debug\34561814\armeabi-v7a'
+ninja: no work to do.

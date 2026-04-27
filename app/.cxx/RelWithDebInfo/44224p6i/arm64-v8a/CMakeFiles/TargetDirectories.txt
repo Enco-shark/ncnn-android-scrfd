@@ -1,0 +1,3 @@
+D:/data/Desktop/face/ncnn-android-scrfd/app/.cxx/RelWithDebInfo/44224p6i/arm64-v8a/CMakeFiles/scrfdncnn.dir
+D:/data/Desktop/face/ncnn-android-scrfd/app/.cxx/RelWithDebInfo/44224p6i/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/data/Desktop/face/ncnn-android-scrfd/app/.cxx/RelWithDebInfo/44224p6i/arm64-v8a/CMakeFiles/rebuild_cache.dir
