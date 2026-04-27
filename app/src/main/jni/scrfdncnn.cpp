@@ -218,7 +218,7 @@ JNIEXPORT void JNICALL JNI_OnUnload(JavaVM* vm, void* reserved)
     __android_log_print(ANDROID_LOG_DEBUG, "ncnn", "JNI_OnUnload");
 }
 
-JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_loadModel(JNIEnv* env, jobject thiz, jobject assetManager, jint modelid, jint cpugpu)
+JNIEXPORT jboolean JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_loadModel(JNIEnv* env, jobject thiz, jobject assetManager, jint modelid, jint cpugpu)
 {
     if (modelid < 0 || modelid > 7 || cpugpu < 0 || cpugpu > 1)
     {
@@ -284,7 +284,7 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_loadModel(JNIEnv
     return JNI_TRUE;
 }
 
-JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_openCamera(JNIEnv* env, jobject thiz, jint facing)
+JNIEXPORT jboolean JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_openCamera(JNIEnv* env, jobject thiz, jint facing)
 {
     if (facing < 0 || facing > 1)
         return JNI_FALSE;
@@ -310,7 +310,7 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_openCamera(JNIEn
     return JNI_TRUE;
 }
 
-JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_closeCamera(JNIEnv* env, jobject thiz)
+JNIEXPORT jboolean JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_closeCamera(JNIEnv* env, jobject thiz)
 {
     __android_log_print(ANDROID_LOG_DEBUG, "ncnn", "closeCamera");
 
@@ -324,7 +324,7 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_closeCamera(JNIE
     return JNI_TRUE;
 }
 
-JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_setOutputWindow(JNIEnv* env, jobject thiz, jobject surface)
+JNIEXPORT jboolean JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_setOutputWindow(JNIEnv* env, jobject thiz, jobject surface)
 {
     ANativeWindow* win = ANativeWindow_fromSurface(env, surface);
 
@@ -340,13 +340,13 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_setOutputWindow(
     return JNI_TRUE;
 }
 
-JNIEXPORT jint JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getFaceCount(JNIEnv* env, jobject thiz)
+JNIEXPORT jint JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_getFaceCount(JNIEnv* env, jobject thiz)
 {
     ncnn::MutexLockGuard g(recognition_lock);
     return (jint)g_recognition_results.size();
 }
 
-JNIEXPORT jstring JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getRecognitionResult(JNIEnv* env, jobject thiz, jint faceIndex)
+JNIEXPORT jstring JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_getRecognitionResult(JNIEnv* env, jobject thiz, jint faceIndex)
 {
     ncnn::MutexLockGuard g(recognition_lock);
 
@@ -356,7 +356,7 @@ JNIEXPORT jstring JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getRecognitionRes
     return env->NewStringUTF(g_recognition_results[faceIndex].c_str());
 }
 
-JNIEXPORT jfloat JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getRecognitionSimilarity(JNIEnv* env, jobject thiz, jint faceIndex)
+JNIEXPORT jfloat JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_getRecognitionSimilarity(JNIEnv* env, jobject thiz, jint faceIndex)
 {
     ncnn::MutexLockGuard g(recognition_lock);
 
@@ -366,35 +366,35 @@ JNIEXPORT jfloat JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getRecognitionSimi
     return g_recognition_similarities[faceIndex];
 }
 
-JNIEXPORT jfloat JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getFaceRectX(JNIEnv* env, jobject thiz, jint faceIndex)
+JNIEXPORT jfloat JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_getFaceRectX(JNIEnv* env, jobject thiz, jint faceIndex)
 {
     ncnn::MutexLockGuard g(recognition_lock);
     if (faceIndex < 0 || faceIndex >= (jint)g_face_rect_x.size()) return 0.0f;
     return g_face_rect_x[faceIndex];
 }
 
-JNIEXPORT jfloat JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getFaceRectY(JNIEnv* env, jobject thiz, jint faceIndex)
+JNIEXPORT jfloat JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_getFaceRectY(JNIEnv* env, jobject thiz, jint faceIndex)
 {
     ncnn::MutexLockGuard g(recognition_lock);
     if (faceIndex < 0 || faceIndex >= (jint)g_face_rect_y.size()) return 0.0f;
     return g_face_rect_y[faceIndex];
 }
 
-JNIEXPORT jfloat JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getFaceRectWidth(JNIEnv* env, jobject thiz, jint faceIndex)
+JNIEXPORT jfloat JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_getFaceRectWidth(JNIEnv* env, jobject thiz, jint faceIndex)
 {
     ncnn::MutexLockGuard g(recognition_lock);
     if (faceIndex < 0 || faceIndex >= (jint)g_face_rect_w.size()) return 0.0f;
     return g_face_rect_w[faceIndex];
 }
 
-JNIEXPORT jfloat JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_getFaceRectHeight(JNIEnv* env, jobject thiz, jint faceIndex)
+JNIEXPORT jfloat JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_getFaceRectHeight(JNIEnv* env, jobject thiz, jint faceIndex)
 {
     ncnn::MutexLockGuard g(recognition_lock);
     if (faceIndex < 0 || faceIndex >= (jint)g_face_rect_h.size()) return 0.0f;
     return g_face_rect_h[faceIndex];
 }
 
-JNIEXPORT void JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_clearRecognitionResults(JNIEnv* env, jobject thiz)
+JNIEXPORT void JNICALL Java_com_enco_shark_scrfdncnn_SCRFDNcnn_clearRecognitionResults(JNIEnv* env, jobject thiz)
 {
     ncnn::MutexLockGuard g(recognition_lock);
     g_recognition_results.clear();

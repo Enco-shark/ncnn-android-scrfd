@@ -2,11 +2,11 @@ plugins {
     id 'com.android.application'
 }
 android {
-    namespace 'com.tencent.scrfdncnn'
+    namespace 'com.enco.shark.scrfdncnn'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.tencent.scrfdncnn"
+        applicationId "com.enco.shark.scrfdncnn"
 
         minSdkVersion 24
         targetSdkVersion 35

@@ -39,11 +39,23 @@
 
     </LinearLayout>
 
-    <SurfaceView
-        android:id="@+id/cameraview"
+    <FrameLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1">
+
+        <SurfaceView
+            android:id="@+id/cameraview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <!-- 中文覆盖层 - 用于在摄像头画面上绘制中文 -->
+        <com.enco.shark.scrfdncnn.OverlayView
+            android:id="@+id/overlayView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </FrameLayout>
 
     <!-- 识别结果显示区域 -->
     <LinearLayout
