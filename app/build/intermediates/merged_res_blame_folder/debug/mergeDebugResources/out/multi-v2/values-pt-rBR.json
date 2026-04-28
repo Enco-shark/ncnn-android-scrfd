@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.tencent.scrfdncnn.app-mergeDebugResources-5:/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "com.enco.shark.scrfdncnn.app-mergeDebugResources-5:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
                     "source": "C:\\Users\\chena\\.gradle\\caches\\9.4.1\\transforms\\3a8abb205c8851fb6a66a1d994e8a4ce\\transformed\\core-1.12.0\\res\\values-pt-rBR\\values-pt-rBR.xml",

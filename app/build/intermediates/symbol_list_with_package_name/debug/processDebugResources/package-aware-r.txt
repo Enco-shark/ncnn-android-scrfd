@@ -1,4 +1,4 @@
-com.tencent.scrfdncnn
+com.enco.shark.scrfdncnn
 array cpugpu_array
 array model_array
 attr alpha
@@ -122,6 +122,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id overlayView
 id recognitionResult
 id right_icon
 id right_side

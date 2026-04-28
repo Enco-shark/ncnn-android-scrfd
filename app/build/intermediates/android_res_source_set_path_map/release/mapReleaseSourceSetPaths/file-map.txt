@@ -1,9 +1,0 @@
-com.tencent.scrfdncnn.app-pngs-0 D:\data\Desktop\face\ncnn-android-scrfd\app\build\generated\res\pngs\release
-com.tencent.scrfdncnn.app-resValues-1 D:\data\Desktop\face\ncnn-android-scrfd\app\build\generated\res\resValues\release
-com.tencent.scrfdncnn.app-updated_navigation_xml-2 D:\data\Desktop\face\ncnn-android-scrfd\app\build\generated\updated_navigation_xml\release
-com.tencent.scrfdncnn.app-packageReleaseResources-3 D:\data\Desktop\face\ncnn-android-scrfd\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
-com.tencent.scrfdncnn.app-packageReleaseResources-4 D:\data\Desktop\face\ncnn-android-scrfd\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
-com.tencent.scrfdncnn.app-release-5 D:\data\Desktop\face\ncnn-android-scrfd\app\build\intermediates\merged_res\release\mergeReleaseResources
-com.tencent.scrfdncnn.app-main-6 D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\res
-com.tencent.scrfdncnn.app-release-7 D:\data\Desktop\face\ncnn-android-scrfd\app\src\release\res
-gradleHome-0 C:\Users\chena\.gradle

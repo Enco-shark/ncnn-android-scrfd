@@ -47,14 +47,14 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ch
 		ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:label
 		ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:9:18-50
-activity#com.tencent.scrfdncnn.MainActivity
+activity#com.enco.shark.scrfdncnn.MainActivity
 ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:10:9-15:20
 	android:label
-		ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:10:47-79
+		ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:10:72-104
 	android:exported
-		ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:10:80-103
+		ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:10:105-128
 	android:name
-		ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:10:19-46
+		ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:10:19-71
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\data\Desktop\face\ncnn-android-scrfd\app\src\main\AndroidManifest.xml:11:13-14:29
 action#android.intent.action.MAIN
@@ -91,7 +91,7 @@ ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\trans
 		ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-permission#com.tencent.scrfdncnn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.enco.shark.scrfdncnn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
@@ -101,7 +101,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
-uses-permission#com.tencent.scrfdncnn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.enco.shark.scrfdncnn.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] C:\Users\chena\.gradle\caches\9.4.1\transforms\3a8abb205c8851fb6a66a1d994e8a4ce\transformed\core-1.12.0\AndroidManifest.xml:26:22-94

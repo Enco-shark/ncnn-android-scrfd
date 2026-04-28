@@ -1,6 +1,6 @@
 [
     {
-        "merged": "com.tencent.scrfdncnn.app-debug-7:/layout_main.xml.flat",
-        "source": "com.tencent.scrfdncnn.app-main-9:/layout/main.xml"
+        "merged": "com.enco.shark.scrfdncnn.app-debug-7:/layout_main.xml.flat",
+        "source": "com.enco.shark.scrfdncnn.app-main-9:/layout/main.xml"
     }
 ]

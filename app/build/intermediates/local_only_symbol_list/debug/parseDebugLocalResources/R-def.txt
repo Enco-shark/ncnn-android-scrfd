@@ -4,6 +4,7 @@ array cpugpu_array
 array model_array
 id buttonSwitchCamera
 id cameraview
+id overlayView
 id recognitionResult
 id spinnerCPUGPU
 id spinnerModel

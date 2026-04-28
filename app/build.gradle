@@ -3,13 +3,13 @@ plugins {
 }
 android {
     namespace 'com.enco.shark.scrfdncnn'
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.enco.shark.scrfdncnn"
 
         minSdkVersion 24
-        targetSdkVersion 35
+        targetSdkVersion 36
 
         externalNativeBuild {
             cmake {

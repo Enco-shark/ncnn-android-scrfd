@@ -151,6 +151,11 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
 
     private void updateRecognitionResults()
     {
+        // 防止在 Activity 销毁后继续执行
+        if (scrfdncnn == null || isFinishing() || isDestroyed()) {
+            return;
+        }
+
         StringBuilder resultText = new StringBuilder();
         boolean hasResult = false;
 
@@ -260,9 +265,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
     @Override
     public void onDestroy()
     {
-        super.onDestroy();
-
-        // 停止Handler的所有回调
+        // 先停止Handler的所有回调，再调用 super.onDestroy()
         if (updateHandler != null) {
             if (updateRunnable != null) {
                 updateHandler.removeCallbacks(updateRunnable);
@@ -286,5 +289,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback
         recognitionResultView = null;
 
         Log.i("MainActivity", "onDestroy completed");
+
+        super.onDestroy();
     }
 }

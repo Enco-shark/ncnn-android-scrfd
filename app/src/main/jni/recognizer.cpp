@@ -48,18 +48,51 @@ int Recognizer::load_database(AAssetManager* mgr)
     const void* data = AAsset_getBuffer(asset);
     off_t size = AAsset_getLength(asset);
 
+    if (size < 4) {
+        __android_log_print(ANDROID_LOG_ERROR, "ncnn", "Database file too small: %d bytes", (int)size);
+        AAsset_close(asset);
+        return -1;
+    }
+
     const char* ptr = static_cast<const char*>(data);
+    off_t remaining = size;
 
     num_people = *reinterpret_cast<const int32_t*>(ptr);
     ptr += 4;
+    remaining -= 4;
+
+    if (num_people <= 0 || num_people > 10000) {
+        __android_log_print(ANDROID_LOG_ERROR, "ncnn", "Invalid number of people: %d", num_people);
+        AAsset_close(asset);
+        return -1;
+    }
 
     names.resize(num_people);
 
     for (int i = 0; i < num_people; i++) {
+        if (remaining < 4) {
+            __android_log_print(ANDROID_LOG_ERROR, "ncnn", "Unexpected end of file at person %d", i);
+            num_people = i;
+            names.resize(num_people);
+            embeddings.resize(num_people, std::vector<float>(512));
+            AAsset_close(asset);
+            return -1;
+        }
         int32_t name_len = *reinterpret_cast<const int32_t*>(ptr);
         ptr += 4;
+        remaining -= 4;
+
+        if (name_len <= 0 || name_len > 256 || remaining < name_len) {
+            __android_log_print(ANDROID_LOG_ERROR, "ncnn", "Invalid name length %d at person %d", name_len, i);
+            num_people = i;
+            names.resize(num_people);
+            embeddings.resize(num_people, std::vector<float>(512));
+            AAsset_close(asset);
+            return -1;
+        }
         names[i] = std::string(ptr, ptr + name_len);
         ptr += name_len;
+        remaining -= name_len;
     }
 
     const int embedding_dim = 512;
@@ -67,17 +100,27 @@ int Recognizer::load_database(AAssetManager* mgr)
 
     const float* emb_ptr = reinterpret_cast<const float*>(ptr);
     for (int i = 0; i < num_people; i++) {
+        if (remaining < embedding_dim * 4) {
+            __android_log_print(ANDROID_LOG_ERROR, "ncnn", "Unexpected end of file at embedding %d", i);
+            num_people = i;
+            embeddings.resize(num_people);
+            AAsset_close(asset);
+            return -1;
+        }
         std::copy(emb_ptr, emb_ptr + embedding_dim, embeddings[i].begin());
         emb_ptr += embedding_dim;
+        remaining -= embedding_dim * 4;
     }
 
     AAsset_close(asset);
 
     __android_log_print(ANDROID_LOG_INFO, "ncnn", "Loaded %d faces from database", num_people);
-    __android_log_print(ANDROID_LOG_INFO, "ncnn", "First few names: %s, %s, %s",
-                       num_people > 0 ? names[0].c_str() : "none",
-                       num_people > 1 ? names[1].c_str() : "none",
-                       num_people > 2 ? names[2].c_str() : "none");
+    if (num_people > 0) {
+        __android_log_print(ANDROID_LOG_INFO, "ncnn", "First few names: %s, %s, %s",
+                           names[0].c_str(),
+                           num_people > 1 ? names[1].c_str() : "none",
+                           num_people > 2 ? names[2].c_str() : "none");
+    }
 
     return 0;
 }

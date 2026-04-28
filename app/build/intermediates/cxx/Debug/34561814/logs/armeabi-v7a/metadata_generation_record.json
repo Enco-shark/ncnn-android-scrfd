@@ -5,7 +5,52 @@
   "tag": "debug|armeabi-v7a"
 },
 {
-  "message": "JSON \u0027D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\.cxx\\Debug\\34561814\\armeabi-v7a\\android_gradle_build.json\u0027 was up-to-date",
+  "message": "rebuilding JSON D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\.cxx\\Debug\\34561814\\armeabi-v7a\\android_gradle_build.json due to:",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "- a hard configure file changed, will remove stale configuration folder",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "  - D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\.cxx\\Debug\\34561814\\armeabi-v7a\\metadata_generation_command.txt (LAST_MODIFIED_CHANGED)",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "removing stale contents from \u0027D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\.cxx\\Debug\\34561814\\armeabi-v7a\u0027",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "created folder \u0027D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\.cxx\\Debug\\34561814\\armeabi-v7a\u0027",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "executing cmake @echo off\n\"D:\\\\data\\\\Android\\\\SDK\\\\cmake\\\\3.22.1\\\\bin\\\\cmake.exe\" ^\n  \"-HD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\src\\\\main\\\\jni\" ^\n  \"-DCMAKE_SYSTEM_NAME\u003dAndroid\" ^\n  \"-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\" ^\n  \"-DCMAKE_SYSTEM_VERSION\u003d24\" ^\n  \"-DANDROID_PLATFORM\u003dandroid-24\" ^\n  \"-DANDROID_ABI\u003darmeabi-v7a\" ^\n  \"-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a\" ^\n  \"-DANDROID_NDK\u003dD:\\\\data\\\\Android\\\\SDK\\\\ndk\\\\28.2.13676358\" ^\n  \"-DCMAKE_ANDROID_NDK\u003dD:\\\\data\\\\Android\\\\SDK\\\\ndk\\\\28.2.13676358\" ^\n  \"-DCMAKE_TOOLCHAIN_FILE\u003dD:\\\\data\\\\Android\\\\SDK\\\\ndk\\\\28.2.13676358\\\\build\\\\cmake\\\\android.toolchain.cmake\" ^\n  \"-DCMAKE_MAKE_PROGRAM\u003dD:\\\\data\\\\Android\\\\SDK\\\\cmake\\\\3.22.1\\\\bin\\\\ninja.exe\" ^\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\34561814\\\\obj\\\\armeabi-v7a\" ^\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\34561814\\\\obj\\\\armeabi-v7a\" ^\n  \"-DCMAKE_BUILD_TYPE\u003dDebug\" ^\n  \"-BD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\.cxx\\\\Debug\\\\34561814\\\\armeabi-v7a\" ^\n  -GNinja ^\n  \"-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES\u003dON\"\n",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "@echo off\n\"D:\\\\data\\\\Android\\\\SDK\\\\cmake\\\\3.22.1\\\\bin\\\\cmake.exe\" ^\n  \"-HD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\src\\\\main\\\\jni\" ^\n  \"-DCMAKE_SYSTEM_NAME\u003dAndroid\" ^\n  \"-DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON\" ^\n  \"-DCMAKE_SYSTEM_VERSION\u003d24\" ^\n  \"-DANDROID_PLATFORM\u003dandroid-24\" ^\n  \"-DANDROID_ABI\u003darmeabi-v7a\" ^\n  \"-DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a\" ^\n  \"-DANDROID_NDK\u003dD:\\\\data\\\\Android\\\\SDK\\\\ndk\\\\28.2.13676358\" ^\n  \"-DCMAKE_ANDROID_NDK\u003dD:\\\\data\\\\Android\\\\SDK\\\\ndk\\\\28.2.13676358\" ^\n  \"-DCMAKE_TOOLCHAIN_FILE\u003dD:\\\\data\\\\Android\\\\SDK\\\\ndk\\\\28.2.13676358\\\\build\\\\cmake\\\\android.toolchain.cmake\" ^\n  \"-DCMAKE_MAKE_PROGRAM\u003dD:\\\\data\\\\Android\\\\SDK\\\\cmake\\\\3.22.1\\\\bin\\\\ninja.exe\" ^\n  \"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003dD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\34561814\\\\obj\\\\armeabi-v7a\" ^\n  \"-DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003dD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\build\\\\intermediates\\\\cxx\\\\Debug\\\\34561814\\\\obj\\\\armeabi-v7a\" ^\n  \"-DCMAKE_BUILD_TYPE\u003dDebug\" ^\n  \"-BD:\\\\data\\\\Desktop\\\\face\\\\ncnn-android-scrfd\\\\app\\\\.cxx\\\\Debug\\\\34561814\\\\armeabi-v7a\" ^\n  -GNinja ^\n  \"-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES\u003dON\"\n",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "Received process result: 0",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "Exiting generation of D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\.cxx\\Debug\\34561814\\armeabi-v7a\\compile_commands.json.bin normally",
+  "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
+  "tag": "debug|armeabi-v7a"
+},
+{
+  "message": "done executing cmake",
   "file": "D:\\data\\Desktop\\face\\ncnn-android-scrfd\\app\\src\\main\\jni\\CMakeLists.txt",
   "tag": "debug|armeabi-v7a"
 },
