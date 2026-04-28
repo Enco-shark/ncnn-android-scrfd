@@ -1,3 +1,14 @@
+#本项目烂尾了
+
+这个项目我不想弄了
+
+烂尾了
+
+如果需要使用请看上层作者@nihui
+
+https://github.com/nihui/ncnn-android-scrfd
+
+
 # ncnn-android-scrfd
 
 The SCRFD face detection
@@ -34,6 +45,4 @@ https://github.com/nihui/opencv-mobile
 * Most small models run slower on GPU than on CPU, this is common
 * FPS may be lower in dark environment because of longer camera exposure time
 
-## screenshot
-![](screenshot.jpg)
 
